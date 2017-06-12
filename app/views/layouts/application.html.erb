@@ -2,8 +2,12 @@
 <html>
   <head>
     <title>AutoTrack</title>
+    <div id="wrapper">
+      <div class="header">
+        <%= render "/layouts/header" %>
+      </div>
+    </div>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>

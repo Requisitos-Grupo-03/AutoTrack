@@ -12,4 +12,76 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap
+  *= require font-awesome
+  *= require ionicons
+  *= require admin-lte
  */
+
+ html, body, #wrapper {
+   margin: 0;
+   padding: 0;
+ }
+
+ body {
+   background-image: url("overlay-background.png"), url("login.jpg") !important;
+ }
+
+ .main-header  {
+   color: #222222 !important;
+   background-color: #ffffff !important;
+ }
+ #header-logo-name {
+   vertical-align: middle;
+ }
+
+ /*.main-header > .logo {
+   color: #222222 !important;
+   background-color: #ffffff !important;
+ }*/
+
+ .flash-conteiner {
+  width: 50%;
+  padding-top: 1%;
+}
+
+.alert.alert {
+  width: 100%;
+  margin-left: 50%;
+  text-align: center;
+}
+
+.alert.alert-notice {
+  border: 1px solid #f39c12;
+  background: cornsilk;
+}
+
+.footer {
+  position: fixed;
+  width: 100%;
+  left: 0px;
+  bottom: 0px;
+  /*FIXME*/
+  display: none;
+}
+
+.submission {
+  display: none;
+}
+
+.rooms > h2,
+.people > h2,
+.topics > h2,
+.questions > h2 {
+  border-bottom: 1px solid gray;
+}
+
+.search-results {
+  margin: 0% 0 0 5%;
+  width: 90%
+}
+
+/* dropdown overflow correction */
+.dropdown-menu {
+    left: -11.5em !important;
+}
