@@ -6,9 +6,20 @@ git_source(:github) do |repo_name|
 end
 
 gem 'devise'
-gem 'admin_lte-rails'
-gem 'rails-assets-admin-lte'
 gem 'bootstrap'
+
+source 'https://rails-assets.org' do
+  gem 'rails-assets-admin-lte'
+  gem 'rails-assets-moment'
+  gem 'rails-assets-bootstrap-daterangepicker'
+  gem 'rails-assets-bootstrap-rtl'
+  gem 'rails-assets-jquery-icheck'
+  gem 'rails-assets-jquery-knob'
+  gem 'rails-assets-jquery-sparkline'
+end
+
+gem 'admin_lte-rails'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
 # Use sqlite3 as the database for Active Record
