@@ -1,0 +1,214 @@
+<p id="notice"><%= notice %></p>
+
+<div id="to-do-list", class="box box-primary">
+  <div class="box-header">
+    <i class="ion ion-clipboard"></i>
+
+    <h3 class="box-title">To Do List</h3>
+
+    <div class="box-tools pull-right">
+      <!-- <ul class="pagination pagination-sm inline"> -->
+        <!-- <li><a href="#">&laquo;</a></li> -->
+        <!-- <li><a href="#">1</a></li> -->
+        <!-- <li><a href="#">2</a></li> -->
+        <!-- <li><a href="#">3</a></li> -->
+        <!-- <li><a href="#">&raquo;</a></li> -->
+      <!-- </ul> -->
+    </div>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <ul class="todo-list">
+      <!-- <li> -->
+        <!-- drag handle -->
+            <!-- <span class="handle"> -->
+              <!-- <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-ellipsis-v"></i> -->
+            <!-- </span> -->
+        <!-- checkbox -->
+        <!-- <input type="checkbox" value=""> -->
+        <!-- todo text -->
+        <!-- <span class="text"><%= Board.name %></span> -->
+        <!-- Emphasis label -->
+        <!-- <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small> -->
+        <!-- General tools such as edit or delete-->
+        <!-- <div class="tools"> -->
+          <!-- <i class="fa fa-edit"></i> -->
+          <!-- <i class="fa fa-trash-o"></i> -->
+        <!-- </div> -->
+      </li>
+
+    </ul>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer clearfix no-border">
+    <!-- <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item <%= link_to '', new_board_path %></button> -->
+    <!-- <%= link_to 'New Activit', new_board_path, class: 'btn btn-default pull-right'%> -->
+  </div>
+</div>
+
+
+<div id="doing-list", class="box box-primary">
+  <div class="box-header">
+    <i class="ion ion-clipboard"></i>
+
+    <h3 class="box-title">Doing</h3>
+
+    <div class="box-tools pull-right">
+      <!-- <ul class="pagination pagination-sm inline"> -->
+        <!-- <li><a href="#">&laquo;</a></li> -->
+        <!-- <li><a href="#">1</a></li> -->
+        <!-- <li><a href="#">2</a></li> -->
+        <!-- <li><a href="#">3</a></li> -->
+        <!-- <li><a href="#">&raquo;</a></li> -->
+      <!-- </ul> -->
+    </div>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <ul class="todo-list">
+      <!-- <li> -->
+        <!-- drag handle -->
+            <!-- <span class="handle"> -->
+              <!-- <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-ellipsis-v"></i> -->
+            <!-- </span> -->
+        <!-- checkbox -->
+        <!-- <input type="checkbox" value=""> -->
+        <!-- todo text -->
+        <!-- <span class="text"><%= Board.name %></span> -->
+        <!-- Emphasis label -->
+        <!-- <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small> -->
+        <!-- General tools such as edit or delete-->
+        <!-- <div class="tools"> -->
+          <!-- <i class="fa fa-edit"></i> -->
+          <!-- <i class="fa fa-trash-o"></i> -->
+        <!-- </div> -->
+      </li>
+
+    </ul>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer clearfix no-border">
+    <!-- <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item <%= link_to '', new_board_path %></button> -->
+    <!-- <%= link_to 'New Activit', new_board_path, class: 'btn btn-default pull-right'%> -->
+  </div>
+</div>
+<!--
+<h1>Boards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @boards.each do |board| %>
+      <tr>
+        <td><%= board.name %></td>
+        <td><%= link_to 'Show', board %></td>
+        <td><%= link_to 'Edit', edit_board_path(board) %></td>
+        <td><%= link_to 'Destroy', board, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br> -->
+
+<div id="validate-list", class="box box-primary">
+  <div class="box-header">
+    <i class="ion ion-clipboard"></i>
+
+    <h3 class="box-title">Reviewing</h3>
+
+    <div class="box-tools pull-right">
+      <!-- <ul class="pagination pagination-sm inline"> -->
+        <!-- <li><a href="#">&laquo;</a></li> -->
+        <!-- <li><a href="#">1</a></li> -->
+        <!-- <li><a href="#">2</a></li> -->
+        <!-- <li><a href="#">3</a></li> -->
+        <!-- <li><a href="#">&raquo;</a></li> -->
+      <!-- </ul> -->
+    </div>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <ul class="todo-list">
+      <!-- <li> -->
+        <!-- drag handle -->
+            <!-- <span class="handle"> -->
+              <!-- <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-ellipsis-v"></i> -->
+            <!-- </span> -->
+        <!-- checkbox -->
+        <!-- <input type="checkbox" value=""> -->
+        <!-- todo text -->
+        <!-- <span class="text"><%= Board.name %></span> -->
+        <!-- Emphasis label -->
+        <!-- <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small> -->
+        <!-- General tools such as edit or delete-->
+        <!-- <div class="tools"> -->
+          <!-- <i class="fa fa-edit"></i> -->
+          <!-- <i class="fa fa-trash-o"></i> -->
+        <!-- </div> -->
+      </li>
+
+    </ul>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer clearfix no-border">
+    <!-- <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item <%= link_to '', new_board_path %></button> -->
+    <!-- <%= link_to 'New Activit', new_board_path, class: 'btn btn-default pull-right'%> -->
+  </div>
+</div>
+
+<div id="done-list", class="box box-primary">
+  <div class="box-header">
+    <i class="ion ion-clipboard"></i>
+
+    <h3 class="box-title">Done</h3>
+
+    <div class="box-tools pull-right">
+      <!-- <ul class="pagination pagination-sm inline"> -->
+        <!-- <li><a href="#">&laquo;</a></li> -->
+        <!-- <li><a href="#">1</a></li> -->
+        <!-- <li><a href="#">2</a></li> -->
+        <!-- <li><a href="#">3</a></li> -->
+        <!-- <li><a href="#">&raquo;</a></li> -->
+      <!-- </ul> -->
+    </div>
+  </div>
+  <!-- /.box-header -->
+  <div class="box-body">
+    <ul class="todo-list">
+      <!-- <li> -->
+        <!-- drag handle -->
+            <!-- <span class="handle"> -->
+              <!-- <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-ellipsis-v"></i> -->
+            <!-- </span> -->
+        <!-- checkbox -->
+        <!-- <input type="checkbox" value=""> -->
+        <!-- todo text -->
+        <!-- <span class="text"><%= Board.name %></span> -->
+        <!-- Emphasis label -->
+        <!-- <small class="label label-danger"><i class="fa fa-clock-o"></i> 2 mins</small> -->
+        <!-- General tools such as edit or delete-->
+        <!-- <div class="tools"> -->
+          <!-- <i class="fa fa-edit"></i> -->
+          <!-- <i class="fa fa-trash-o"></i> -->
+        <!-- </div> -->
+      </li>
+
+    </ul>
+  </div>
+  <!-- /.box-body -->
+  <div class="box-footer clearfix no-border">
+    <!-- <button type="button" class="btn btn-default pull-right"><i class="fa fa-plus"></i> Add item <%= link_to '', new_board_path %></button> -->
+    <!-- <%= link_to 'New Activit', new_board_path, class: 'btn btn-default pull-right'%> -->
+  </div>
+</div>

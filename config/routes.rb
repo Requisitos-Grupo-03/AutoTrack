@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :boards
+    root 'users#index'
   devise_for :members
   devise_for :installs
   resources :users
