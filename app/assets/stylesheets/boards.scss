@@ -1,0 +1,34 @@
+// Place all the styles related to the Boards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#to-do-list{
+  margin-top: 49px;
+  margin-left: 12px;
+  width: 320px;
+  margin-bottom: 30px;
+  height: 400px;
+}
+
+#doing-list{
+  margin-top: -430px;
+  margin-left: 342px;
+  width: 320px;
+  margin-bottom: 30px;
+  height: 400px;
+}
+
+#validate-list{
+  margin-top: -430px;
+  margin-left: 672px;
+  width: 320px;
+  margin-bottom: 30px;
+  height: 400px;
+}
+
+#done-list{
+  margin-top: -430px;
+  margin-left: 1002px;
+  width: 320px;
+  margin-bottom: 30px;
+  height: 400px;
+}

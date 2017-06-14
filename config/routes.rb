@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :boards
+    root 'users#index'
   devise_for :members
   devise_for :installs
   resources :users
@@ -9,7 +11,7 @@ Rails.application.routes.draw do
     get '/log_out', to: 'devise/sessions#destroy'
   end
 
-  get '/whatever', to: 'users#index'
+  get '/boards', to: 'board#index'
   get '/home', to: 'static_pages#home_page'
   root 'static_pages#home_page'
   get '*unmatched_route', :to => 'static_pages#not_found'

@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actioncable (5.0.3)
       actionpack (= 5.0.3)
@@ -229,7 +230,13 @@ DEPENDENCIES
   listen (~> 3.0.5)
   puma (~> 3.0)
   rails (~> 5.0.3)
-  rails-assets-admin-lte
+  rails-assets-admin-lte!
+  rails-assets-bootstrap-daterangepicker!
+  rails-assets-bootstrap-rtl!
+  rails-assets-jquery-icheck!
+  rails-assets-jquery-knob!
+  rails-assets-jquery-sparkline!
+  rails-assets-moment!
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
@@ -240,4 +247,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.13.1
+   1.14.6
