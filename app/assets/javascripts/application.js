@@ -16,3 +16,24 @@
 //= require_tree .
 //= require bootstrap.min
 //= require admin-lte
+
+(function ($) {
+  $.fn.sizeChanged = function (handleFunction) {
+      var element = this;
+      var lastWidth = element.width();
+      var lastHeight = element.height();
+
+      setInterval(function () {
+          if (lastWidth === element.width() && lastHeight === element.height())
+              return;
+          if (typeof (handleFunction) == 'function') {
+              handleFunction({ width: lastWidth, height: lastHeight },
+                             { width: element.width(), height: element.height() });
+              lastWidth = element.width();
+              lastHeight = element.height();
+          }
+      }, 200);
+
+      return element;
+  };
+}(jQuery));
