@@ -48,7 +48,7 @@
 
 .alert.alert {
   width: 100%;
-  margin-left: 50%;
+  margin-left: 0%;
   text-align: center;
 }
 
@@ -91,7 +91,7 @@
 /*Logo*/
 .navbar-brand { position: relative; z-index: 2;}
 
-.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 6px 25px; margin: 7px auto; color: #388E3C}
+.navbar-nav.navbar-right .btn { position: relative; z-index: 2; padding: 6px 25px; margin: 7px  auto; color: #388E3C}
 
 .navbar .navbar-collapse { position: relative;}
 .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px;}
