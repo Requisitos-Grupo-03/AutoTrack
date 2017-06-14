@@ -1,35 +1,53 @@
-<center>
 
-<div class="login-tmp-box col-md-6">
-  <div class="login-box">
-    <div class="login-box-body">
+<!-- <center> -->
+<section class="initial-page content-header">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
 
-      <p class="login-box-msg">Comece agora!</p>
-      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <div class="form-group has-feedback">
-          <%= f.email_field :email, class:  'form-control', placeholder: 'Email', autofocus: true %>
-          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+    <div class="login-tmp-box col-md-6">
+      <div class="login-box">
+        <div class="login-box-body">
+
+          <p class="login-box-msg">Comece agora!</p>
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+            <div class="form-group has-feedback">
+              <%= f.email_field :email, class:  'form-control', placeholder: 'Email', autofocus: true %>
+              <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+
+            <div class="form-group has-feedback">
+              <%= f.password_field :password, class:  'form-control', placeholder: 'Senha', autocomplete: "off" %>
+              <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            </div>
+
+            <!-- <% if devise_mapping.rememberable? -%>
+              <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :Lembrar_me %>
+              </div>
+            <% end -%> -->
+
+            <center>
+            <div class="row">
+              <div class="col-md-4">
+              </div>
+
+                <div class="col-md-4">
+                  <%= f.submit 'Logar', class: 'btn btn-primary btn-block btn-flat btn-matheus'   %>
+                </div>
+            </div>
+
+            <!-- <div class="actions">
+              <%= f.submit "Logar" %>
+            </div> -->
+          <% end %>
+
+          <%= render "members/shared/links" %>
+        </center>
         </div>
-
-        <div class="form-group has-feedback">
-          <%= f.password_field :password, class:  'form-control', placeholder: 'Senha', autocomplete: "off" %>
-          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-        </div>
-
-        <% if devise_mapping.rememberable? -%>
-          <div class="field">
-            <%= f.check_box :remember_me %>
-            <%= f.label :Lembrar_me %>
-          </div>
-        <% end -%>
-
-        <div class="actions">
-          <%= f.submit "Logar" %>
-        </div>
-      <% end %>
-
-      <%= render "members/shared/links" %>
+      </div>
     </div>
   </div>
-</div>
-</center>
+<!-- </center> -->
+</section>
