@@ -27,18 +27,19 @@
    background-image: url("overlay-background.png"), url("login.jpg") !important;
  }
 
- .main-header  {
+ .main-header {
    color: #222222 !important;
    background-color: #ffffff !important;
  }
  #header-logo-name {
    vertical-align: middle;
+   color: #228B22 !important;
  }
 
- /*.main-header > .logo {
+ .main-header > .logo {
    color: #222222 !important;
    background-color: #ffffff !important;
- }*/
+ }
 
  .flash-conteiner {
   width: 50%;
@@ -85,3 +86,30 @@
 .dropdown-menu {
     left: -11.5em !important;
 }
+
+/*********************Aqui*********************/
+/*Logo*/
+.navbar-brand { position: relative; z-index: 2;}
+
+.navbar-nav.navbar-right .btn { position: fixed; z-index: 2; padding: 6px 25px; margin: 7px auto; color: #388E3C}
+
+.navbar .navbar-collapse { position: relative;}
+.navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 22px;}
+
+.navbar .nav-collapse { position: absolute; z-index: 1; top: 0; left: 0; right: 0; bottom: 0; margin: 0; padding-right: 120px; padding-left: 80px; width: 100%;border-color: #388E3C;}
+.navbar.navbar-default .nav-collapse { background-color: #f8f8f8;}
+.navbar.navbar-inverse .nav-collapse { background-color: #222; }
+.navbar .nav-collapse .navbar-form { border-width: 0; box-shadow: none; }
+.nav-collapse>li { float: right; }
+
+.btn.btn-circle { border-radius: 50px; border-color: #388E3C;}
+.btn.btn-outline { background-color: transparent;}
+
+@media screen and (max-width: 767px) {
+    .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; }
+
+    .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .nav-collapse>li { float: none;}
+}
+.red_it {color: #cc0000 !important; border-color: #cc0000 !important}
