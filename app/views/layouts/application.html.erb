@@ -7,6 +7,16 @@
         <%= render "/layouts/header" %>
       </div>
     </div>
+    <%= wicked_pdf_stylesheet_link_tag "activities.scss" %>
+    <%= wicked_pdf_stylesheet_link_tag "aplication.scss" %>
+    <%= wicked_pdf_stylesheet_link_tag "boards.scss" %>
+    <%= wicked_pdf_stylesheet_link_tag "login.scss" %>
+    <%= wicked_pdf_stylesheet_link_tag "not_found.scss" %>
+    <%= wicked_pdf_stylesheet_link_tag "scaffolds.scss" %>
+    <%= wicked_pdf_stylesheet_link_tag "session.scss" %>
+    <%= wicked_pdf_stylesheet_link_tag "users.scss" %>
+
+
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>

@@ -10,6 +10,15 @@ class ActivitiesController < ApplicationController
   # GET /activities/1
   # GET /activities/1.json
   def show
+    @activity = Activity.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.pdf do
+
+        render  :pdf => "your-filename", :template => '/activities/show.html.erb', header: {template: "layout/_header.html.erb"}
+      end
+    end
   end
 
   # GET /activities/new

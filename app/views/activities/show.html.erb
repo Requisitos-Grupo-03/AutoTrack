@@ -1,24 +1,47 @@
-<p id="notice"><%= notice %></p>
+<section class="initial-page content-header">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
 
-<p>
-  <strong>Title:</strong>
-  <%= @activity.title %>
-</p>
+    <div class="login-tmp-box col-md-6">
+      <div class="login-box">
+        <div class="login-box-body">
 
-<p>
-  <strong>State:</strong>
-  <%= @activity.state %>
-</p>
+          <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @activity.description %>
-</p>
+          <center>
+            <h2>Atividade <%= @activity.id %></h2>
+          </center>
+          <p>
+            <strong>Title:</strong>
+            <%= @activity.title %>
+          </p>
 
-<p>
-  <strong>Owner:</strong>
-  <%= @activity.owner %>
-</p>
+          <p>
+            <strong>State:</strong>
+            <%= @activity.state %>
+          </p>
 
-<%= link_to 'Edit', edit_activity_path(@activity) %> |
-<%= link_to 'Back', activities_path %>
+          <p>
+            <strong>Description:</strong>
+            <%= @activity.description %>
+          </p>
+
+          <p>
+            <strong>Owner:</strong>
+            <%= @activity.owner %>
+          </p>
+
+          <center>
+            <%= link_to 'Edit', edit_activity_path(@activity) %> |
+            <%= link_to 'Back', activities_path %>
+
+            <p><%= link_to 'Gerar PDF', activity_path(@activity, format: "pdf"), target: "_blank", class: "btn btn-primary btn-block btn-flat btn-matheus" %></p>
+          </center>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- </center> -->
+</section>
