@@ -1,24 +1,43 @@
-<p id="notice"><%= notice %></p>
+<section class="initial-page content-header">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+    <div class="login-tmp-box col-md-6">
+      <div class="login-box">
+        <div class="login-box-body">
 
-<p>
-  <strong>Registration:</strong>
-  <%= @user.registration %>
-</p>
+          <p id="notice"><%= notice %></p>
+          <center>
+            <h2>Title</h2>
+          </center>
+          <p>
+            <strong>Name:</strong>
+            <%= @user.name %>
+          </p>
 
-<p>
-  <strong>Office:</strong>
-  <%= @user.office %>
-</p>
+          <p>
+            <strong>Registration:</strong>
+            <%= @user.registration %>
+          </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+          <p>
+            <strong>Office:</strong>
+            <%= @user.office %>
+          </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+          <p>
+            <strong>Email:</strong>
+            <%= @user.email %>
+          </p>
+
+          <center>
+            <%= link_to 'Edit', edit_user_path(@user) %> |
+            <%= link_to 'Back', users_path %></br>
+            <p><%= link_to 'Gerar PDF', user_path(@user, format: "pdf"), target: "_blank" %></p>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

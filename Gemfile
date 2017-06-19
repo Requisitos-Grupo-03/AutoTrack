@@ -5,6 +5,8 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'wkhtmltopdf-binary', '~> 0.12.3.1'
+gem 'wicked_pdf'
 gem 'devise'
 gem 'bootstrap'
 
