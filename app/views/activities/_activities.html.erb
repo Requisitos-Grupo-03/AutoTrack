@@ -1,0 +1,13 @@
+
+<li>
+  <!-- todo text -->
+    <span class="text"><%= activity.title %></span>
+  <!-- Emphasis label -->
+  <!-- General tools such as edit or delete -->
+  <div class="tools">
+    <%= link_to '', move_left_path(activity), class: 'fa fa-arrow-left', id: 'button-left' %>
+    <%= link_to '', move_right_path(activity), class: 'fa fa-arrow-right', id: 'button-right' %>
+    <%= link_to '', edit_activity_path(activity), class: 'fa fa-edit' %>
+    <%= link_to '', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'fa fa-trash-o' %>
+  </div>
+</li>
