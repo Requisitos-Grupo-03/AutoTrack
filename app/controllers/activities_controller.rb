@@ -28,7 +28,7 @@ class ActivitiesController < ApplicationController
 
     respond_to do |format|
       if @activity.save
-        format.html { redirect_to @activity, notice: 'Activity was successfully created.' }
+        format.html { redirect_to boards_path, notice: 'Activity was successfully created.' }
         format.json { render :show, status: :created, location: @activity }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class ActivitiesController < ApplicationController
   def update
     respond_to do |format|
       if @activity.update(activity_params)
-        format.html { redirect_to @activity, notice: 'Activity was successfully updated.' }
+        format.html { redirect_to boards_path, notice: 'Activity was successfully updated.' }
         format.json { render :show, status: :ok, location: @activity }
       else
         format.html { render :edit }
@@ -56,9 +56,43 @@ class ActivitiesController < ApplicationController
   def destroy
     @activity.destroy
     respond_to do |format|
-      format.html { redirect_to activities_url, notice: 'Activity was successfully destroyed.' }
+      format.html { redirect_to boards_path, notice: 'Activity was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def move_right
+    @activity = Activity.find(params[:id])
+    case @activity.state
+    when "todo"
+      puts @activity.state
+      @activity.state = "doing"
+      puts @activity.state
+    when "doing"
+      @activity.state = "reviewing"
+    when "reviewing"
+      @activity.state = "done"
+    else
+      # foda-se
+    end
+    @activity.save
+    redirect_to boards_path
+  end
+
+  def move_left
+    @activity = Activity.find(params[:id])
+    case @activity.state
+    when "done"
+      @activity.state = "reviewing"
+    when "reviewing"
+      @activity.state = "doing"
+    when "doing"
+      @activity.state = "todo"
+    else
+      # foda-se
+    end
+    @activity.save
+    redirect_to boards_path
   end
 
   private

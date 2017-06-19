@@ -1,3 +1,22 @@
 // Place all the styles related to the Activities controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#to-do-button{
+  margin-bottom: -50px;
+}
+
+.fa-arrow-right:before {
+  color: red;
+}
+
+.fa-arrow-left:before {
+  color: red;
+}
+
+.fa-edit:before {
+  color: red;
+}
+
+.fa-trash-o:before {
+  color: red;
+}

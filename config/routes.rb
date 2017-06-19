@@ -12,6 +12,10 @@ Rails.application.routes.draw do
     get '/log_out', to: 'devise/sessions#destroy'
   end
 
+  get 'activities/:id/move_right' => 'activities#move_right', as: 'move_right'
+  get 'activities/:id/move_left', to: 'activities#move_left', as: 'move_left'
+  # post '/boards', to: 'activities#move_right', as: 'move_right'
+
   get '/boards', to: 'board#index'
   get '/home', to: 'static_pages#home_page'
   root 'static_pages#home_page'

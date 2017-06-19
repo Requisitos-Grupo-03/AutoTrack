@@ -13,6 +13,24 @@ class BoardsController < ApplicationController
   def show
   end
 
+  def new
+    @board = Board.new
+  end
+
+  def create
+    @board = Board.new(board_params)
+
+    respond_to do |format|
+      if @board.save
+        format.html { redirect_to @board, notice: 'Board was successfully created.' }
+        format.json { render :show, status: :created, location: @board }
+      else
+        format.html { render :new }
+        format.json { render json: @board.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_board
