@@ -1,5 +1,25 @@
-<h1>New Activity</h1>
+<section class="initial-page content-header">
+  <div class="row">
+    <div class="col-md-3">
+    </div>
 
-<%= render 'form', activity: @activity %>
+    <div class="login-tmp-box col-md-6">
+      <div class="login-box">
+        <div class="login-box-body">
 
-<%= link_to 'Back', activities_path %>
+          <center>
+            <h1>New Activity</h1>
+          </center>
+
+            <%= render 'form', activity: @activity %>
+
+            <center>
+              <%= link_to 'Back', activities_path %>
+            </center>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
