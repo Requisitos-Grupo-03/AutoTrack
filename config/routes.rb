@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   resources :activities
   resources :boards
-    root 'users#index'
+    # root 'users#index'
   devise_for :members
   devise_for :installs
   resources :users
 
   devise_scope :member do
-    # root to: "devise/sessions#new"
+    root to: "devise/sessions#new"
     get '/log_in', to: 'devise/sessions#new'
     get '/log_out', to: 'devise/sessions#destroy'
   end
