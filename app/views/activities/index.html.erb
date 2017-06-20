@@ -1,3 +1,12 @@
+<!-- <%= stylesheet_link_tag wicked_pdf_asset_base64("activities.scss") %> -->
+<!-- <%= stylesheet_link_tag wicked_pdf_asset_base64("application.css") %> -->
+<!-- <%= stylesheet_link_tag wicked_pdf_asset_base64("boards.scss") %> -->
+<!-- <%= stylesheet_link_tag wicked_pdf_asset_base64("login.scss") %>
+<%= stylesheet_link_tag wicked_pdf_asset_base64("not_found.scss") %>
+<%= stylesheet_link_tag wicked_pdf_asset_base64("scaffolds.scss") %>
+<%= stylesheet_link_tag wicked_pdf_asset_base64("session.scss") %>
+<%= stylesheet_link_tag wicked_pdf_asset_base64("users.scss") %> -->
+
 <section class="initial-page content-header">
   <div class="row">
     <div class="col-md-3">
@@ -44,6 +53,7 @@
 
           <center>
           <%= link_to 'New Activity', new_activity_path, class: 'btn btn-primary  btn-flat btn-matheus' %>
+          <%= link_to 'Generate PDF&#160&#160<i class="fa fa-file-pdf-o" aria-hidden="true"></i>'.html_safe, activities_path(@activities, format: "pdf"), target: "_blank", class: "btn btn-primary btn-flat btn-matheus" %>
         </center>
 
 
