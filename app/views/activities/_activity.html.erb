@@ -1,0 +1,11 @@
+<!-- <%= stylesheet_link_tag wicked_pdf_asset_base64 ("activity.scss") %> -->
+
+<tr>
+  <td><%= activity.title %></td>
+  <td><%= activity.state %></td>
+  <td><%= activity.description %></td>
+  <td><%= activity.owner %></td>
+  <td><%= link_to 'Show', activity, class: 'btn btn-primary btn-block btn-flat' %></td>
+  <td><%= link_to 'Edit', edit_activity_path(activity), class: 'btn btn-primary btn-block btn-flat' %></td>
+  <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-block btn-flat ' %></td>
+</tr>

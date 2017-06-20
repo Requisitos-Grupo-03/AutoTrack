@@ -36,15 +36,8 @@
 
             <tbody>
               <% @activities.each do |activity| %>
-              <tr>
-                <td><%= activity.title %></td>
-                <td><%= activity.state %></td>
-                <td><%= activity.description %></td>
-                <td><%= activity.owner %></td>
-                <td><%= link_to 'Show', activity, class: 'btn btn-primary btn-block btn-flat' %></td>
-                <td><%= link_to 'Edit', edit_activity_path(activity), class: 'btn btn-primary btn-block btn-flat' %></td>
-                <td><%= link_to 'Destroy', activity, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-primary btn-block btn-flat ' %></td>
-              </tr>
+                <%= render partial: 'activity', :locals => {activity: activity}%>
+
               <% end %>
             </tbody>
           </table>
@@ -52,7 +45,7 @@
           <br>
 
           <center>
-          <%= link_to 'New Activity', new_activity_path, class: 'btn btn-primary  btn-flat btn-matheus' %>
+          <%= link_to 'New Activity', new_activity_path, class: 'btn btn-primary btn-flat btn-matheus' %>
           <%= link_to 'Generate PDF&#160&#160<i class="fa fa-file-pdf-o" aria-hidden="true"></i>'.html_safe, activities_path(@activities, format: "pdf"), target: "_blank", class: "btn btn-primary btn-flat btn-matheus" %>
         </center>
 

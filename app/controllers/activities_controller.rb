@@ -6,20 +6,15 @@ class ActivitiesController < ApplicationController
   def index
     @activities = Activity.all
 
-    @activities.each do |activity|
       respond_to do |format|
         format.html
         format.pdf do
           render  :pdf => "pdf",
                   :template => '/activities/index.html.erb',
-                  title: "Relatorio-Atividade-#{activity.id}",
+                  title: "Relatorio-Atividade",
                   margin: {top: 40},
                   header: {html: {template: 'header.html.erb'}, spacing: 10}
-          # render  :pdf => "pdf", :header => {:html => {:layout => 'layouts/header.pdf.erb'}}
-          # render  :pdf => "your-filename", :template => '/activities/show.html.erb', header: {template: "layouts/header.pdf.erb"}
         end
-      end
-      break
     end
   end
 
